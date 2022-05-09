@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div class="grid-container">
+            <div class="output">
+                <div data-previous-operand class="previous-operand"></div>
+                <div data-current-operand class="current-operand"></div>
+            </div>
+            <button onclick="clickClearAll()" class="button-top">AC</button>
+            <button onclick="clickDelete()" class="button-top">DEL</button>
+            <button onclick="clickOperator('%')" class="button-top">%</button>
+            <button onclick="clickOperator('/')" class="operator">÷</button>
+            <button onclick="clickNumber('7')">7</button>
+            <button onclick="clickNumber('8')">8</button>
+            <button onclick="clickNumber('9')">9</button>
+            <button onclick="clickOperator('*')" class="operator">x</button>
+            <button onclick="clickNumber('4')">4</button>
+            <button onclick="clickNumber('5')">5</button>
+            <button onclick="clickNumber('6')">6</button>
+            <button onclick="clickOperator('-')" class="operator">-</button>
+            <button onclick="clickNumber('1')">1</button>
+            <button onclick="clickNumber('2')">2</button>
+            <button onclick="clickNumber('3')">3</button>
+            <button onclick="clickOperator('+')" class="operator">+</button>
+            <button onclick="clickNumber('0')"class="span-two">0</button>
+            <button onclick="clickPoint('.')">.</button>
+            <button onclick="clickResult()"class="operator">=</button>
+        </div>
+        <footer>
+            <h2>Developed by: Lucas Natan </h2></br>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

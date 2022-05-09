@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: black;
+}
+
+.grid-container{
+    display: grid;  /*Grid utilizado nesse projeto*/
+    justify-content: center;
+    align-content: center;
+    min-height: 92vh; 
+    grid-template-columns: repeat(4, 100px); /*4 colunas*/ 
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px); /*5 linhas*/
+   
+}
+.grid-container > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #eee;
+    border-radius: 50%;
+    margin: 6px;
+}
+.grid-container > button:hover{
+    background-color: rgb(63, 63, 63);
+}
+.grid-container > .operator{
+    background: #ff9f0a;
+}
+.grid-container > .operator:hover{
+    background: #fcb954;
+}
+.grid-container > .span-two{
+    grid-column: span 2; /*O espaço de AC  e . é ocupado por 2 colunas */
+    border-radius: 25% !important;
+}
+.grid-container > .button-top{
+    background-color: #a5a5a5 !important;
+    color: #111 !important;
+}
+.grid-container > .button-top:hover{
+    background-color: #c0c0c0 !important;
+    color: #111 !important;
+}
+.grid-container > .output{
+    grid-column: 1 / -1;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /*Itens colocados todos para a direita*/
+    justify-content: space-around; 
+    padding: 10px;
+    word-wrap: break-word; /*Word-wrap para os itens não saírem da div*/
+    word-break: break-all;
+    border-radius: 8%;
+}
+.grid-container > .output > .previous-operand{
+    color: rgba(199, 199, 199, 0.75);
+    font-size: 50px;
+}
+.grid-container > .output > .current-operand{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 45px;
+}
+footer {
+    margin-top: 0px;
+    color: #FFF;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
