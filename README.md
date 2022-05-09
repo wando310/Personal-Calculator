@@ -3,7 +3,7 @@
 Link para acesso: Link: https://lucasnatanmelo.github.io/PersonalCalculator/
 
 ## Sobre o projeto
-Projeto inspirado na calculadora do Iphone, pensando na visualização geral da equação. 
+Projeto inspirado na calculadora do sistema IOS, com a inclusão da visualização geral da equação no visor. 
 Em breve, calculadora científica será implementada com mais funcionalidades.
 
 Utilização de HTML, CSS Grid e JavaScript - Responsivo
