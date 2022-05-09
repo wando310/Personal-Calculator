@@ -1,4 +1,4 @@
-# PersonalCalculator
+# Calculadora On-line
 
 Link para acesso: Link: https://lucasnatanmelo.github.io/PersonalCalculator/
 
