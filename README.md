@@ -8,6 +8,5 @@ Em breve, calculadora científica será implementada com mais funcionalidades.
 
 Utilização de HTML, CSS Grid e JavaScript - Responsivo
 
-![image](https://user-images.githubusercontent.com/100950738/167472458-402bc2f9-93b3-443e-8ce2-671c75cc80f5.png)
-![image](https://user-images.githubusercontent.com/100950738/167472502-c8ff1b8c-b579-4280-8614-e328cf2a9ee7.png)
-
+![image](https://user-images.githubusercontent.com/100950738/167472840-dbab466a-41a2-430c-a3ee-91bbb01720a1.png)
+![image](https://user-images.githubusercontent.com/100950738/167472993-677f3547-a566-4d79-b265-6984935dd2f3.png)
