@@ -1,6 +1,6 @@
 # Calculadora On-line
 
-Link para acesso: Link: https://lucasnatanmelo.github.io/PersonalCalculator/
+Link para acesso: Link: https://lucasnatanmelo.github.io/Personal-Calculator/
 
 ## Sobre o projeto
 Projeto inspirado na calculadora do sistema IOS, com a inclusão da visualização geral da equação no visor. 
