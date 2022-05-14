@@ -17,25 +17,25 @@
                 <div data-previous-operand class="previous-operand"></div>
                 <div data-current-operand class="current-operand"></div>
             </div>
-            <button onclick="clickClearAll()" class="button-top">AC</button>
-            <button onclick="clickDelete()" class="button-top">DEL</button>
-            <button onclick="clickOperator('%')" class="button-top">%</button>
-            <button onclick="clickOperator('/')" class="operator">÷</button>
-            <button onclick="clickNumber('7')">7</button>
-            <button onclick="clickNumber('8')">8</button>
-            <button onclick="clickNumber('9')">9</button>
-            <button onclick="clickOperator('*')" class="operator">x</button>
-            <button onclick="clickNumber('4')">4</button>
-            <button onclick="clickNumber('5')">5</button>
-            <button onclick="clickNumber('6')">6</button>
-            <button onclick="clickOperator('-')" class="operator">-</button>
-            <button onclick="clickNumber('1')">1</button>
-            <button onclick="clickNumber('2')">2</button>
-            <button onclick="clickNumber('3')">3</button>
-            <button onclick="clickOperator('+')" class="operator">+</button>
-            <button onclick="clickNumber('0')"class="span-two">0</button>
-            <button onclick="clickPoint('.')">.</button>
-            <button onclick="clickResult()"class="operator">=</button>
+            <button data-key="Delete" onclick="clickClearAll()" class="button-top">AC</button>
+            <button data-key="Backspace" onclick="clickDelete()" class="button-top">DEL</button>
+            <button data-key="%" onclick="clickOperator('%')" class="button-top">%</button>
+            <button data-key="/" onclick="clickOperator('/')" class="operator">÷</button>
+            <button data-key="7" onclick="clickNumber('7')">7</button>
+            <button data-key="8" onclick="clickNumber('8')">8</button>
+            <button data-key="9" onclick="clickNumber('9')">9</button>
+            <button data-key="*" onclick="clickOperator('*')" class="operator">x</button>
+            <button data-key="4" onclick="clickNumber('4')">4</button>
+            <button data-key="5" onclick="clickNumber('5')">5</button>
+            <button data-key="6" onclick="clickNumber('6')">6</button>
+            <button data-key="-" onclick="clickOperator('-')" class="operator">-</button>
+            <button data-key="1" onclick="clickNumber('1')">1</button>
+            <button data-key="2" onclick="clickNumber('2')">2</button>
+            <button data-key="3" onclick="clickNumber('3')">3</button>
+            <button data-key="+" onclick="clickOperator('+')" class="operator">+</button>
+            <button data-key="0" onclick="clickNumber('0')"class="span-two">0</button>
+            <button data-key="." onclick="clickPoint('.')">.</button>
+            <button data-key="=" onclick="clickResult()"class="operator">=</button>
         </div>
         <footer>
             <h2>Developed by: Lucas Natan </h2></br>

@@ -12,8 +12,47 @@ let equationToShow = '';
 //Variáveis para posição e formatação do ponto '.'
 let pointController = true;
 
+//Funções para receber eventos do teclado
+
+//Monitorador do teclado
+
+document.body.addEventListener('keyup', (e)=>{
+    //Condicionais para botões pressionados - Cor e funcionamento
+    if((e.key === '=') || (e.key === 'Enter')){ //Como o = e Enter compartilham o mesmo comando, o data-key foi normalizado para os dois
+        let keyElement = document.querySelector(`button[data-key='=']`);
+        colorButton(keyElement);    
+    } else{
+        let keyElement = document.querySelector(`button[data-key='${e.key}']`);
+        colorButton(keyElement);
+    }
+
+    if((e.key === '1' ) || (e.key === '2') || (e.key === '3') || (e.key === '4') || (e.key === '5') ||
+    (e.key === '6') || (e.key === '7') || (e.key === '8') || (e.key === '9') || (e.key === '0')){
+        clickNumber(e.key);
+    } if((e.key === '/') || (e.key === '*') || (e.key === '-') || (e.key === '+') || (e.key === '%')){
+        clickOperator(e.key);
+    } if((e.key === '.')){
+        clickPoint(e.key);
+    } if((e.key === 'Delete')){
+        clickClearAll();
+    } if((e.key === 'Backspace')){
+        clickDelete();
+    } if((e.key === '=') || (e.key === 'Enter')){
+        clickResult();
+    }
+});
+
 //Funções gerais
 //Função para recebimento dos números
+
+function colorButton(keyElement){
+    keyElement.classList.add('active');
+    setTimeout(() =>{
+        keyElement.classList.remove('active');
+    }, 300);
+}
+
+//Função para recebimento de números de 0 a 1
 function clickNumber(n){
     equationToCalc = equationToCalc + n;
     showResults();
@@ -66,7 +105,7 @@ function clickDelete(){
 function clickResult(){
     result = eval(equationToCalc); //A função eval retornará como string
     resultToString = result.toString();
-    console.log(`Resultado: ${result}`); 
+    //console.log(`Resultado: ${result}`); 
     showResults()
 }
 
@@ -75,7 +114,7 @@ function clickClearAll(){
     pointController = true;
     resultToString = '';
     equationToCalc = '';
-    console.log(`Equação zerada! ${equationToCalc}`);
+    //console.log(`Equação zerada! ${equationToCalc}`);
     showResults();
 }
 
@@ -89,8 +128,8 @@ function showResults(){
             equationToShow = equationToShow + equationToCalc[i];
         }
     }
-    console.log(`equationToCalc: ${equationToCalc}`);
-    console.log(`equationToShow: ${equationToShow}`);
+    //console.log(`equationToCalc: ${equationToCalc}`);
+    //console.log(`equationToShow: ${equationToShow}`);
     generalEquation.innerHTML = equationToShow;
     generalResult.innerHTML = resultToString;
 }
