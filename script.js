@@ -18,27 +18,31 @@ let pointController = true;
 
 document.body.addEventListener('keyup', (e)=>{
     //Condicionais para botões pressionados - Cor e funcionamento
-    if((e.key === '=') || (e.key === 'Enter')){ //Como o = e Enter compartilham o mesmo comando, o data-key foi normalizado para os dois
-        let keyElement = document.querySelector(`button[data-key='=']`);
-        colorButton(keyElement);    
-    } else{
-        let keyElement = document.querySelector(`button[data-key='${e.key}']`);
-        colorButton(keyElement);
-    }
-
     if((e.key === '1' ) || (e.key === '2') || (e.key === '3') || (e.key === '4') || (e.key === '5') ||
     (e.key === '6') || (e.key === '7') || (e.key === '8') || (e.key === '9') || (e.key === '0')){
+        let keyElement = document.querySelector(`button[data-key='${e.key}']`);
+        colorButton(keyElement);
         clickNumber(e.key);
     } if((e.key === '/') || (e.key === '*') || (e.key === '-') || (e.key === '+') || (e.key === '%')){
+        let keyElement = document.querySelector(`button[data-key='${e.key}']`);
+        colorButton(keyElement);
         clickOperator(e.key);
     } if((e.key === '.')){
+        let keyElement = document.querySelector(`button[data-key='${e.key}']`);
+        colorButton(keyElement);
         clickPoint(e.key);
     } if((e.key === 'Delete')){
+        let keyElement = document.querySelector(`button[data-key='${e.key}']`);
+        colorButton(keyElement);
         clickClearAll();
     } if((e.key === 'Backspace')){
+        let keyElement = document.querySelector(`button[data-key='${e.key}']`);
+        colorButton(keyElement);
         clickDelete();
     } if((e.key === '=') || (e.key === 'Enter')){
-        clickResult();
+        let keyElement = document.querySelector(`button[data-key='=']`);
+        colorButton(keyElement); 
+        clickResult(); 
     }
 });
 
