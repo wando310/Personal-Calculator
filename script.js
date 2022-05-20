@@ -107,7 +107,7 @@ function clickDelete(){
 
 //Função para cálcula e mostrar resultado
 function clickResult(){
-    result = eval(equationToCalc); //A função eval retornará como string
+    result = Function("return " + equationToCalc)(); //Função eval() substituida pela Function() por questões de segurança.
     resultToString = result.toString();
     //console.log(`Resultado: ${result}`); 
     showResults()
