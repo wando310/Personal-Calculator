@@ -62,7 +62,7 @@ function colorButton(keyElement){
 
 //Função para recebimento de números de 0 a 1
 function clickNumber(n){
-    equationToCalc = equationToCalc + n;
+    equationToCalc += n;
     let pressedNumberButton = true;
     showResults();
 }
@@ -70,7 +70,7 @@ function clickNumber(n){
 //Função para recebimento do ponto '.'
 function clickPoint(p){
     if(pointController === true){
-        equationToCalc = equationToCalc + p;
+        equationToCalc += p;
         pointController = false;
         showResults();
     }
@@ -83,14 +83,14 @@ function clickOperator(o){
     
     if((operators.includes(equationToCalc[equationToCalc.length-1])) && (!numbers.includes(equationToCalc[equationToCalc.length-1]))){
         equationToCalc = equationToCalc.substring(0, equationToCalc.length -1);
-        equationToCalc = equationToCalc + o;
+        equationToCalc += o;
         pointController = true;
         showResults();
     }else if((equationToCalc[equationToCalc.length-1]) === '.'){
         showResults();
     }
     else{
-        equationToCalc = equationToCalc + o;
+        equationToCalc += o;
         pointController = true;
         showResults();
     }
@@ -99,11 +99,10 @@ function clickOperator(o){
 //Função para apagar números
 function clickDelete(){
     //Filtro caso o '.' seja apagado
-    if(equationToCalc[equationToCalc.length - 1] === '.'){
-        pointController = true;
-    }else if((operators.includes(equationToCalc[equationToCalc.length-1]))){
-        pointController = false;
-    }
+    equationToCalc[equationToCalc.length - 1] === '.' ? pointController = true: ''
+    
+    operators.includes(equationToCalc[equationToCalc.length-1]) ? pointController = false : ''
+    
     equationToCalc = equationToCalc.substring(0, equationToCalc.length -1);
     showResults();
 }
